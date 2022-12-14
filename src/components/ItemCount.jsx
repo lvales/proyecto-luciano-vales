@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-const ItemCount = ({ InitialStock }) => {
+const ItemCount = ({ initialStock }) => {
 
     const [amount, setAmount] = useState(1);
-    const [stock, setStock] = useState(InitialStock);
+    const [stock, setStock] = useState(initialStock);
 
     const add = () => {
         if (amount < stock) {
@@ -25,9 +25,8 @@ const ItemCount = ({ InitialStock }) => {
     }
 
     return (
-        <div className="bg-slate-100 w-1/6 rounded-lg">
+        <div className=" rounded-lg">
             <div className="p-5">
-                <p className="text-lg font-medium">Mochila TH Jeans City</p>
                 <p className="text-sm">Stock: {stock}</p>
                 <div className="flex px-3 my-3 p-1 justify-between items-center border rounded-md bg-white">
                     <div>
@@ -47,11 +46,11 @@ const ItemCount = ({ InitialStock }) => {
                     </div>
                 </div>
                 <div className="flex flex-row justify-between">
-                    <button className="py-2 px-4 bg-red-500 rounded-bl-xl text-slate-50 font-medium"
+                    <button className="py-2 px-4 bg-red-400 hover:bg-red-600 shadow-lg shadow-red-200 rounded-l-xl text-slate-50 font-medium"
                         onClick={onAdd}>
                         Agregar al carrito
                     </button>
-                    <button className="py-2 px-4 bg-slate-500 rounded-br-xl text-slate-50 font-medium">
+                    <button className="py-2 px-4 bg-slate-400 hover:bg-slate-600 shadow-lg shadow-slate-300 rounded-r-xl text-slate-50 font-medium">
                         Ver carrito
                     </button>
                 </div>
