@@ -13,7 +13,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <Banner />
         <Routes>
           <Route path={'/'} element={<ItemListContainer mensaje='Bienvenido a .Shop' />} />
           <Route path={'/category/:categoryId'} element={<ItemListContainer />} />

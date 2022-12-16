@@ -5,13 +5,15 @@
     "subtitle": null,
     "description": "Pantalon desmontable con proteccion UV 50, ideal para trekking. Confeccionada en una tela altamente respirable, mantiene el cuerpo seco. Esta prenda es de secado rápido. Resulta una prenda versátil, tanto para su uso urbano como para actividades outdoor. No requiere el uso de plancha.",
     "category": "hombre",
+    "sizes": ["s","m","l","xl","xxl"],
     "price": 24500,
     "base_price": 27500,
     "stock": 5,
     "sold_quantity": 3,
     "photo":"/assets/img/products/pantalon_hombre.jpg",
     "photo_min":"/assets/img/products/pantalon_hombre_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,1,0.5],
+    "numberStars": 4.5
   },
   {
     "id": "2",
@@ -19,13 +21,15 @@
     "subtitle": null,
     "description": "Chomba para hombre mangas cortas Montagne. Esta prenda, confeccionada en pique 100% algodón, se destaca por su suavidad, confort y bajo peso. Las fibras de algodón, hacen que esta prenda sea ideal para todo tipo de actividades en días de altas temperaturas. La moldería de esta prenda contempla un margen de encogimiento en el largo, ya que por la composición de su tejido, puede encoger después del primer lavado. Se recomienda lavar a mano con agua fría, no usar secadora y el uso de plancha tibia.",
     "category": "hombre",
+    "sizes": ["s","m","l","xl","xxl"],
     "price": 15690,
     "base_price": 16999,
     "stock": 14,
     "sold_quantity": 7,
     "photo":"/assets/img/products/chomba_hombre.jpg",
     "photo_min":"/assets/img/products/chomba_hombre_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,1,1],
+    "numberStars": 5
   },
   {
     "id": "3",
@@ -33,13 +37,15 @@
     "subtitle": null,
     "description": "Campera impermeable para hombre Montagne Ivor. En un solo tejido esta prenda brinda abrigo (capa interna de mesh) y aislación (membrana impermeable y cortaviento). Debido a su gran elasticidad y poco espesor posibilita el desarrollo de diseños ergonómicos ideales para actividades outdoor que requieren libertad de movimientos.",
     "category": "hombre",
+    "sizes": ["s","m","l","xl","xxl"],
     "price": 16999,
     "base_price": 16999,
     "stock": 20,
     "sold_quantity": 9,
     "photo":"/assets/img/products/campera_hombre.jpg",
     "photo_min":"/assets/img/products/campera_hombre_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,1,1],
+    "numberStars": 5
   },
   {
     "id": "4",
@@ -47,13 +53,15 @@
     "subtitle": null,
     "description": " Esta prenda, confeccionada en pique 100% algodón, se destaca por su suavidad, confort y bajo peso. Las fibras de algodón, hacen que esta prenda sea ideal para todo tipo de actividades en días de altas temperaturas. La moldería de esta prenda contempla un margen de encogimiento en el largo, ya que por la composición de su tejido, puede encoger después del primer lavado.",
     "category": "mujer",
+    "sizes": ["s","m","l","xl","xxl"],
     "price": 14200,
     "base_price": 15999,
     "stock": 20,
     "sold_quantity": 9,
     "photo":"/assets/img/products/chomba_mujer.jpg",
     "photo_min":"/assets/img/products/chomba_mujer_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,0.5,0],
+    "numberStars": 3.5
   },
   {
     "id": "5",
@@ -61,13 +69,15 @@
     "subtitle": null,
     "description": "En un solo tejido esta prenda brinda abrigo (capa interna de micropolar fleece) y aislación (membrana impermeable y cortaviento). Por su elasticidad y poco espesor es ideal para actividades outdoor que requieren libertad de movimientos. Esta prenda cuenta con trampa de nieve, que la hace apta para la práctica de deportes de invierno (ski, snowboard, etc).",
     "category": "mujer",
+    "sizes": ["s","m","l","xl","xxl"],
     "price": 25458,
     "base_price": 26999,
     "stock": 20,
     "sold_quantity": 9,
     "photo":"/assets/img/products/pantalon_mujer.jpg",
     "photo_min":"/assets/img/products/pantalon_mujer_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,1,1],
+    "numberStars": 5
   },
   {
     "id": "6",
@@ -75,13 +85,15 @@
     "subtitle": null,
     "description": "Campera deportiva liviana de mujer Montagne Sofia elastizada y de secado rapido. Confeccionada con tecnología tridimensional Seamless.Este concepto trabaja con la densidad del tejido ofreciendo tramas mas abierta en zonas estratégicas a modo de ventilación, haciendo que la prenda resulte fresca. Es de secado rápido.",
     "category": "mujer",
+    "sizes": ["s","m","l","xl","xxl"],
     "price": 18095,
     "base_price": 19700,
     "stock": 20,
     "sold_quantity": 9,
     "photo":"/assets/img/products/campera_mujer.jpg",
     "photo_min":"/assets/img/products/campera_mujer_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,1,0.5],
+    "numberStars": 4.5
   },
   {
     "id": "7",
@@ -89,13 +101,15 @@
     "subtitle": null,
     "description": "Pantalón super liviano y cómodo para niños Montagne Conway. Confeccionada en una tela altamente respirable, mantiene el cuerpo seco.    Esta prenda es repelente al agua y de secado rápido. No requiere el uso de plancha.",
     "category": "kids",
+    "sizes": ["s","m","l","xl"],
     "price": 19950,
     "base_price": 20700,
     "stock": 20,
     "sold_quantity": 9,
     "photo":"/assets/img/products/pantalon_kids.jpg",
     "photo_min":"/assets/img/products/pantalon_kids_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,1,1],
+    "numberStars": 5
   },
   {
     "id": "8",
@@ -103,13 +117,15 @@
     "subtitle": null,
     "description": "Buzo polar térmico secado rápido super cómodo Esta prenda es una excelente segunda piel por sus prop. térmicas. Posee un tratamiento antipilling en su cara externa que mantiene por más tiempo el aspecto original de la prenda. Por su aspecto y diseño, esta prenda resulta versátil tanto para su uso outdoor como urbano.",
     "category": "kids",
+    "sizes": ["s","m","l","xl"],
     "price": 10850,
     "base_price": 11700,
     "stock": 20,
     "sold_quantity": 9,
     "photo":"/assets/img/products/buzo_kids.jpg",
     "photo_min":"/assets/img/products/buzo_kids_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,1,0.5],
+    "numberStars": 4.5
   },
   {
     "id": "9",
@@ -117,12 +133,14 @@
     "subtitle": null,
     "description": "Por su relleno de pluma natural (450 cuin), esta prenda posee la característica inigualable de retener calor en forma pareja y sostenida,sumando la particularidad de un bajo peso y alta compresibilidad. Para preservar las características de la prenda, no se recomienda almacenarla compactada por largos períodos de tiempo. Posee un tratamineto de repelencia al agua. No es impermeable.",
     "category": "kids",
+    "sizes": ["s","m","l","xl"],
     "price": 36850,
     "base_price": 39700,
     "stock": 20,
     "sold_quantity": 9,
     "photo":"/assets/img/products/campera_kids.jpg",
     "photo_min":"/assets/img/products/campera_kids_min.jpg",
-    "stars": 5
+    "stars": [1,1,1,0.5,0],
+    "numberStars": 3.5
   }
 ]
