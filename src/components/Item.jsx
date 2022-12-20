@@ -15,7 +15,7 @@ const Item = ({ item }) => {
                <Link to={"/item/" + item.id}>
                   <h5 className="text-lg font-semibold tracking-tight text-gray-600 ">{item.title}</h5>
                </Link>
-               <div className="flex items-center mt-2.5 mb-5">
+               <div className="flex items-center mt-2.5 mb-1">
                <StarsRanking stars={item.stars} numberStars={item.numberStars} />
                </div>
                <div className="text-lg line-through text-gray-400 font-semibold">${formatNumber(item.base_price)}</div>

@@ -5,16 +5,14 @@ const ItemCount = ({ initialStock }) => {
     const [amount, setAmount] = useState(1);
     const [stock, setStock] = useState(initialStock);
 
+    console.log(stock);
+
     const add = () => {
-        if (amount < stock) {
             setAmount(amount + 1);
-        }
     }
 
     const subtract = () => {
-        if (amount > 1) {
             setAmount(amount - 1);
-        }
     }
 
     const onAdd = () => {
@@ -25,12 +23,12 @@ const ItemCount = ({ initialStock }) => {
     }
 
     return (
-        <div className=" rounded-lg">
-            <div className="p-5">
+        <>
+            <div className="py-5">
                 <p className="text-sm">Stock: {stock}</p>
                 <div className="flex px-3 my-3 p-1 justify-between items-center border rounded-md bg-white">
                     <div>
-                        <button className="text-2xl font-semibold text-sky-600"
+                        <button className="text-2xl font-semibold text-sky-600" disabled={amount <= stock}
                             onClick={subtract}>
                             -
                         </button>
@@ -39,7 +37,7 @@ const ItemCount = ({ initialStock }) => {
                         <p>{amount}</p>
                     </div>
                     <div>
-                        <button className="text-2xl font-semibold text-sky-600"
+                        <button className="text-2xl font-semibold text-sky-600" disabled={amount >= stock}
                             onClick={add}>
                             +
                         </button>
@@ -55,7 +53,7 @@ const ItemCount = ({ initialStock }) => {
                     </button>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

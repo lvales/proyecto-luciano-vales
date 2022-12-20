@@ -28,7 +28,7 @@ const ItemListContainer = ({ mensaje }) => {
    return (
       <>
          <Banner />
-         <p className="mt-1 text-xl lg:text-5xl text-slate-600 text-center lg:p-10 lg:mt-48 font-bold">{mensaje}</p>
+         <p className="mt-1 text-xl lg:text-5xl text-slate-600 text-center lg:p-10 mt-10 font-bold">{mensaje}</p>
          <ItemList items={items} />
       </>
    );
