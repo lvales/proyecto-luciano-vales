@@ -11,12 +11,12 @@ const Banner = () => {
                   <div className="lg:pb-5 lg:mb-5 text-center lg:text-start lg:flex-nowrap">
                      <h3 className="font-light lg:text-4xl pb-1 text-white">¡Apurate! Oferta por tiempo limitado.</h3>
                      <h2 className="text-xl xl:text-6xl font-semibold text-white mt-3">Rebajas en ropa deportiva</h2>
-                     <p className="text-xl xl:text-2xl font-normal text-white mt-3">Zapatillas, keds, remeras y muccho más...</p>
+                     <p className="text-xl xl:text-2xl font-normal text-white mt-3">Zapatillas, keds, remeras y mucho más...</p>
                   </div>
                </div>
             </div>
             <div className="xl:absolute xl:bottom-1 left-1/4">
-               <Category />
+               {/* <Category /> */}
             </div>
          </div>
       </>
