@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path={'/'} element={<ItemListContainer mensaje='Bienvenido a .Shop' />} />
+          <Route path={'/'} element={<ItemListContainer message='Bienvenido a .Shop' />} />
           <Route path={'/category/:categoryId'} element={<ItemListContainer />} />
           <Route path={'/item/:itemId'} element={<ItemDetailContainer />} />
           <Route path={'*'} element={<Error404 />} />

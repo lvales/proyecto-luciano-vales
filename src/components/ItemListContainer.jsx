@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Banner from "./Banner";
 
-const ItemListContainer = ({ mensaje }) => {
+const ItemListContainer = ({ message }) => {
 
    const [items, setItems] = useState([]);
    const { categoryId } = useParams();
@@ -28,8 +28,7 @@ const ItemListContainer = ({ mensaje }) => {
    return (
       <>
          <Banner />
-         <p className="mt-1 text-xl lg:text-5xl text-slate-600 text-center lg:p-10 mt-10 font-bold">{mensaje}</p>
-         <ItemList items={items} />
+         <ItemList items={items} message={message}/>
       </>
    );
 }

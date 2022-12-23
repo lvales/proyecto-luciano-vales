@@ -24,7 +24,6 @@ const DetailSizeColor = ({ sizes, colors }) => {
                {
                   colors?.map((color, id) => {
                      const style = "mr-2 border-2 border-slate-400 rounded-full p-4 " + color;
-                     console.log(style);
                      return (
                         <div key={id} className={ style }></div>
                      );

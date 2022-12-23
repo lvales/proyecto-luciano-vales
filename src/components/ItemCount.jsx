@@ -5,8 +5,6 @@ const ItemCount = ({ initialStock }) => {
     const [amount, setAmount] = useState(1);
     const [stock, setStock] = useState(initialStock);
 
-    console.log(stock);
-
     const add = () => {
             setAmount(amount + 1);
     }
