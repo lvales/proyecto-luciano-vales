@@ -4,19 +4,16 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Banner from "./Banner";
 
-const ItemListContainer = ({ message }) => {
+const ItemListContainer = ({ message, banner }) => {
 
    const [items, setItems] = useState([]);
    const { categoryId } = useParams();
 
-
    useEffect(() => {
-
-      const getProducts = new Promise((resolve) => {
+      const getProducts = Promise((resolve) => {
          setTimeout(() => {
             resolve(categoryId ? products.filter((product) => product.category === categoryId) : products);
          }, 2000);
-
       });
 
       getProducts.then((result) => {
@@ -26,10 +23,10 @@ const ItemListContainer = ({ message }) => {
    }, [categoryId]);
 
    return (
-      <>
-         <Banner />
+      <div className="">
+         {(banner === true) ? <Banner /> : null}
          <ItemList items={items} message={message}/>
-      </>
+      </div>
    );
 }
 

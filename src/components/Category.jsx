@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Category = () => {
    return (
-      <>
+      <div className="row-span-1 flex justify-center">
          <div className="p-4 max-w-3xl rounded-lg overflow-hidden shadow-lg inline-flex text-center bg-white text-slate-600 h-max">
             <Link to={"category/hombre"}>
                <img className="p-3" src="/assets/img/cat-sm01.jpg" alt="Hombre" />
@@ -23,7 +23,7 @@ const Category = () => {
                </div>
             </Link>
          </div>
-      </>
+      </div>
 
    )
 }

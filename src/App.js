@@ -6,21 +6,24 @@ import NavBar from './components/NavBar';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Error404 from './components/Error404';
 import Footer from './components/Footer';
+import CartContextProvider from './context/CartContext';
 
 function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path={'/'} element={<ItemListContainer message='Bienvenido a .Shop' />} />
-          <Route path={'/category/:categoryId'} element={<ItemListContainer />} />
-          <Route path={'/item/:itemId'} element={<ItemDetailContainer />} />
-          <Route path={'*'} element={<Error404 />} />
-        </Routes>
-        <Footer />  
-      </BrowserRouter>        
+   <CartContextProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path={'/'} element={<ItemListContainer message='Bienvenido a .Shop' banner={true}/>} />
+            <Route path={'/category/:categoryId'} element={<ItemListContainer  message='Productos por categoría' banner={false}/>} />
+            <Route path={'/item/:itemId'} element={<ItemDetailContainer />} />
+            <Route path={'*'} element={<Error404 />} />
+          </Routes>
+          <Footer />  
+        </BrowserRouter>  
+   </CartContextProvider>      
     </div>
   );
 }
