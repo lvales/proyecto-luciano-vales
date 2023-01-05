@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import StarsRanking from "./StarsRanking";
 
-
 const Item = ({ item }) => {
 
    const formatNumber = (number) => new Intl.NumberFormat().format(Math.round(number));
+   
    return (
       <>
          <div className="my-5 mx-1 h-full w-full max-w-sm bg-white rounded-lg shadow-md ">

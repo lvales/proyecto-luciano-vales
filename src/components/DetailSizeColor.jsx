@@ -13,7 +13,7 @@ const DetailSizeColor = ({ sizes, colors }) => {
                {
                   sizes?.map((size, id) => {
                      return (
-                        <button className="border border-slate-800 rounded-md w-9 text-center m-1 uppercase inline-block align-middle hover:border-red-400 hover:bg-red-400 hover:text-white active:border-red-400 selection:bg-red-400" key={id}>
+                        <button className="border border-slate-800 rounded-md w-9 text-center m-1 uppercase inline-block align-middle hover:border-red-400 hover:bg-red-400 hover:text-white active:border-red-400 selection::bg-red-400" key={id}>
                            {size}
                         </button>
                      );

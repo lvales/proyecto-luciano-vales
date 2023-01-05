@@ -1,10 +1,10 @@
+import { Animated } from 'react-animated-css'
 import Item from './Item'
 
 const ItemList = ({ items, message }) => {
    return (
-      <>
-         <p className="lg:mt-10 text-xl lg:text-5xl text-slate-600 text-center lg:p-10 font-bold">{message}</p>
-         <div className='container mx-auto mb-40'>
+      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+         <div className='container mx-auto my-20'>
             <div className="flex flex-wrap items-center justify-around ">
                {
                   items.map((item) =>
@@ -13,7 +13,7 @@ const ItemList = ({ items, message }) => {
                }
             </div>
          </div>
-      </>
+      </Animated>
    )
 }
 
