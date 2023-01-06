@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "item_id": "1",
     "title": "Pantalón Montagne Sherpa Base",
     "subtitle": null,
     "description": "Pantalon desmontable con proteccion UV 50, ideal para trekking. Confeccionada en una tela altamente respirable, mantiene el cuerpo seco. Esta prenda es de secado rápido. Resulta una prenda versátil, tanto para su uso urbano como para actividades outdoor. No requiere el uso de plancha.",
@@ -17,7 +17,7 @@
     "numberStars": 4.5
   },
   {
-    "id": "2",
+    "item_id": "2",
     "title": "Chomba Montagne Norten",
     "subtitle": null,
     "description": "Chomba para hombre mangas cortas Montagne. Esta prenda, confeccionada en pique 100% algodón, se destaca por su suavidad, confort y bajo peso. Las fibras de algodón, hacen que esta prenda sea ideal para todo tipo de actividades en días de altas temperaturas. La moldería de esta prenda contempla un margen de encogimiento en el largo, ya que por la composición de su tejido, puede encoger después del primer lavado. Se recomienda lavar a mano con agua fría, no usar secadora y el uso de plancha tibia.",
@@ -34,7 +34,7 @@
     "numberStars": 5
   },
   {
-    "id": "3",
+    "item_id": "3",
     "title": "Campera Montagne Impermeable",
     "subtitle": null,
     "description": "Campera impermeable para hombre Montagne Ivor. En un solo tejido esta prenda brinda abrigo (capa interna de mesh) y aislación (membrana impermeable y cortaviento). Debido a su gran elasticidad y poco espesor posibilita el desarrollo de diseños ergonómicos ideales para actividades outdoor que requieren libertad de movimientos.",
@@ -51,7 +51,7 @@
     "numberStars": 4
   },
   {
-    "id": "4",
+    "item_id": "4",
     "title": "Chomba Montagne Sonna Polo",
     "subtitle": null,
     "description": " Esta prenda, confeccionada en pique 100% algodón, se destaca por su suavidad, confort y bajo peso. Las fibras de algodón, hacen que esta prenda sea ideal para todo tipo de actividades en días de altas temperaturas. La moldería de esta prenda contempla un margen de encogimiento en el largo, ya que por la composición de su tejido, puede encoger después del primer lavado.",
@@ -68,7 +68,7 @@
     "numberStars": 3.5
   },
   {
-    "id": "5",
+    "item_id": "5",
     "title": "Pantalon Montagne Impermeable",
     "subtitle": null,
     "description": "En un solo tejido esta prenda brinda abrigo (capa interna de micropolar fleece) y aislación (membrana impermeable y cortaviento). Por su elasticidad y poco espesor es ideal para actividades outdoor que requieren libertad de movimientos. Esta prenda cuenta con trampa de nieve, que la hace apta para la práctica de deportes de invierno (ski, snowboard, etc).",
@@ -85,7 +85,7 @@
     "numberStars": 5
   },
   {
-    "id": "6",
+    "item_id": "6",
     "title": "Campera Chaqueta Montage",
     "subtitle": null,
     "description": "Campera deportiva liviana de mujer Montagne Sofia elastizada y de secado rapido. Confeccionada con tecnología tridimensional Seamless.Este concepto trabaja con la densidad del tejido ofreciendo tramas mas abierta en zonas estratégicas a modo de ventilación, haciendo que la prenda resulte fresca. Es de secado rápido.",
@@ -102,7 +102,7 @@
     "numberStars": 4.5
   },
   {
-    "id": "7",
+    "item_id": "7",
     "title": "Pantalon Largo Montagne Conway",
     "subtitle": null,
     "description": "Pantalón super liviano y cómodo para niños Montagne Conway. Confeccionada en una tela altamente respirable, mantiene el cuerpo seco.    Esta prenda es repelente al agua y de secado rápido. No requiere el uso de plancha.",
@@ -119,7 +119,7 @@
     "numberStars": 5
   },
   {
-    "id": "8",
+    "item_id": "8",
     "title": "Buzo Polar Montagne Snap Termico",
     "subtitle": null,
     "description": "Buzo polar térmico secado rápido super cómodo Esta prenda es una excelente segunda piel por sus prop. térmicas. Posee un tratamiento antipilling en su cara externa que mantiene por más tiempo el aspecto original de la prenda. Por su aspecto y diseño, esta prenda resulta versátil tanto para su uso outdoor como urbano.",
@@ -136,7 +136,7 @@
     "numberStars": 4.5
   },
   {
-    "id": "9",
+    "item_id": "9",
     "title": "Campera Invierno Pluma Montagne Dixon",
     "subtitle": null,
     "description": "Por su relleno de pluma natural (450 cuin), esta prenda posee la característica inigualable de retener calor en forma pareja y sostenida,sumando la particularidad de un bajo peso y alta compresibilidad. Para preservar las características de la prenda, no se recomienda almacenarla compactada por largos períodos de tiempo. Posee un tratamineto de repelencia al agua. No es impermeable.",

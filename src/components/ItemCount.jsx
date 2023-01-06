@@ -33,9 +33,6 @@ const ItemCount = ({ initialStock, onAdd }) => {
         onAdd(quantity);
     }
 
-    const continueBuy = () => setSoldOut(false)
-
-
     return (
         <>
             <div className="py-5">
