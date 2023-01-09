@@ -8,16 +8,13 @@ const formatNumber = (number) => new Intl.NumberFormat().format(Math.round(numbe
 const Cart = () => {
 
 	const { cart, clear, removeItem, getTotalPrice } = useContext(CartContext);
-	const [checkout, setCheckout] = useState(false);
 
 	const clickRemove = (id) => removeItem(id);
 
 	const clickClear = () => clear();
 
-	const clickCheckout = (value) => setCheckout(value);
-
 	return (
-		<>{(!checkout) ?
+		<>
 			<div className="container flex flex-col -mb-44 h-screen mx-auto px-10 lg:px-28 f">
 				<div className="lg:text-2xl mt-10 text-center">Canasta de compras</div>
 				{(cart.length === 0) ?
@@ -46,15 +43,12 @@ const Cart = () => {
 						<hr />
 						<div className="text-center lg:text-right my-10">
 							<Link to={'/'} className="mr-3 text-white bg-gray-400 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-50-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-lg shadow-gray-200">Seguir comprando</Link>
-							<button onClick={() => clickCheckout(true)} className="text-white bg-red-400 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-lg shadow-red-200">Comprar ahora</button>
+							<Link to={'/checkout'} className="text-white bg-red-400 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center shadow-lg shadow-red-200">Comprar ahora</Link>
 						</div>
 					</>
 					: null
 				}
 			</div>
-			: null
-		}
-			{/* {(checkout) ? <Checkout items={items} total={total} clickClear={clickClear} /> : null} */}
 		</>
 	)
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const ItemCount = ({ initialStock, onAdd }) => {
+const ItemCount = ({ stock, sold, onAdd }) => {
 
 
     const [quantity, setQuantity] = useState(1);
@@ -10,9 +10,8 @@ const ItemCount = ({ initialStock, onAdd }) => {
     const [stockAlert, setstockAlert] = useState(false);
 
     useEffect(() => {
-        setItemStock(initialStock);
-
-    }, [initialStock])
+        setItemStock(stock);
+    }, [stock])
 
     const add = () => {
         (quantity < itemStock) && setQuantity(quantity + 1);
@@ -38,7 +37,10 @@ const ItemCount = ({ initialStock, onAdd }) => {
             <div className="py-5">
                 {
                     !stockAlert ?
-                    <p className="text-sm mb-4">Stock: {itemStock}</p>
+                    <>
+                        <div className="text-sm">Stock: {itemStock}</div>
+                        <div className="text-sm font-semibold mb-4">{sold} personas compraron este producto</div>
+                    </>
                     :
                     <div className="text-sm font-bold text-red-500">No hay stock suficiente</div>
                 }

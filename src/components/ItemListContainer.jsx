@@ -1,13 +1,10 @@
 import ItemList from "./ItemList";
-import products from "../data/productsMl.json";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Banner from "./Banner";
 import { BounceLoader } from "react-spinners";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoTiktok } from "react-icons/io5";
-import { addDoc, collection, getDocs, getFirestore, query, where, limit } from "firebase/firestore";
-
-import { Animated } from "react-animated-css";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 const ItemListContainer = ({ message, setBanner }) => {
 
@@ -18,43 +15,14 @@ const ItemListContainer = ({ message, setBanner }) => {
    useEffect(() => {
       const db = getFirestore();
       const itemsCollection = collection(db, "items");
-      const q = categoryId ? query(itemsCollection, where("categoria", "==", categoryId)) : itemsCollection;
+      const q = categoryId ? query(itemsCollection, where("category", "==", categoryId)) : itemsCollection;
       getDocs(q).then((snapShot) => {
-          setItems(snapShot.docs.map((doc) => ({id:doc.id, ...doc.data()})));
+         setItems(snapShot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
       });
-  }, [categoryId]);
-
-
-   //? Carga de productos en local
-   // useEffect(() => {
-   //    setItems([]);
-   //    const getProducts = new Promise((resolve) => {
-   //       setTimeout(() => {
-   //          resolve(categoryId ? products.filter((product) => product.category === categoryId) : products);
-   //       }, 2000);
-   //    });
-
-   //    getProducts.then((result) => {
-   //       setItems(result);
-   //    });
-
-   // }, [categoryId]);
-
-
-   //? Importar productos en Firebase
-   // useEffect(() => {
-   //    const db = getFirestore();
-   //    const itemCollection = collection(db, "items");
-
-   //    items.forEach((item) => {
-   //       addDoc(itemCollection, item);
-   //    });
-
-   // }, [items]);
-
+   }, [categoryId]);
 
    return (
-      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+      <>
          {(setBanner === true) ? <Banner /> :
             <>
                <div className='relative justify-between flex w-full bg-slate-800 text-white text-3xl py-20 px-40'>
@@ -83,9 +51,8 @@ const ItemListContainer = ({ message, setBanner }) => {
                <>
                   <ItemList items={items} />
                </>
-
          }
-      </Animated>
+      </>
    );
 }
 

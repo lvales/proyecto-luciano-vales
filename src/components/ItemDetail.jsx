@@ -1,24 +1,29 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import ImageDetail from "./ImageDetail";
 import ItemCount from "./ItemCount";
 import StarsRanking from "./StarsRanking";
-import { IoLogoInstagram, IoLogoFacebook, IoLogoTiktok } from 'react-icons/io5';
+import { IoLogoInstagram, IoLogoFacebook, IoLogoTiktok, IoHeartOutline, IoHeart } from 'react-icons/io5';
 import DetailSizeColor from "./DetailSizeColor";
-import { Animated } from "react-animated-css";
 
 const ItemDetail = ({ item }) => {
 
+   const [favorite, setFavorite] = useState(false);
    const { addItem } = useContext(CartContext);
 
    const onAdd = (quantity) => {
       addItem(item, quantity);
    }
 
+   const addFav = () => {
+      setFavorite(!favorite);
+   }
+
    const formatNumber = (number) => new Intl.NumberFormat().format(Math.round(number));
 
+
    return (
-      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+      <>
          <div className='relative justify-between flex w-full bg-slate-800 text-white text-3xl py-20 px-40'>
 
             <div className="mb-10">{item.title}</div>
@@ -32,6 +37,15 @@ const ItemDetail = ({ item }) => {
          </div>
 
          <div className="relative -mt-20 mb-20 p-5 mx-auto h-full w-full max-w-4xl bg-white rounded-lg shadow-md ">
+
+            <div className="flex justify-end">
+               <button onClick={addFav} className='mx-5 text-3xl'>
+                  {
+                     !favorite ? <IoHeartOutline /> : <IoHeart />
+                  }
+               </button>
+            </div>
+
 
             <ImageDetail photos={item.photo} />
 
@@ -52,13 +66,13 @@ const ItemDetail = ({ item }) => {
                   </div >
 
                   <div className="w-5/12">
-                     <ItemCount initialStock={item.stock} onAdd={onAdd} />
+                     <ItemCount stock={item.stock} sold={item.sold_quantity} onAdd={onAdd} />
                   </div>
 
                </div>
             </div>
          </div>
-      </Animated>
+      </>
    )
 }
 

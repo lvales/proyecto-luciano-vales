@@ -1,9 +1,7 @@
-import { Animated } from 'react-animated-css'
 import Item from './Item'
 
 const ItemList = ({ items, message }) => {
-   return (
-      <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
+   return (   
          <div className='container mx-auto my-20'>
             <div className="flex flex-wrap items-center justify-around ">
                {
@@ -13,7 +11,6 @@ const ItemList = ({ items, message }) => {
                }
             </div>
          </div>
-      </Animated>
    )
 }
 
