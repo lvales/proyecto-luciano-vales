@@ -3,8 +3,8 @@ import { CartContext } from '../context/CartContext';
 import { IoBagHandleOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-const CartWidget = ({ cantCart }) => {
-    
+const CartWidget = () => {
+
    const { getTotalItems } = useContext(CartContext);
 
    return (

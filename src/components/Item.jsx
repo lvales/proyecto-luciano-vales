@@ -4,7 +4,7 @@ import StarsRanking from "./StarsRanking";
 const Item = ({ item }) => {
 
    const formatNumber = (number) => new Intl.NumberFormat().format(Math.round(number));
-   
+
    return (
       <>
          <div className="my-5 mx-1 h-full w-full max-w-sm bg-white rounded-lg shadow-md ">
@@ -16,7 +16,7 @@ const Item = ({ item }) => {
                   <h5 className="text-lg font-semibold tracking-tight text-gray-600 ">{item.title}</h5>
                </Link>
                <div className="flex items-center mt-2.5 mb-1">
-               <StarsRanking stars={item.stars} numberStars={item.numberStars} />
+                  <StarsRanking stars={item.stars} numberStars={item.numberStars} />
                </div>
                <div className="text-lg line-through text-gray-400 font-semibold">${formatNumber(item.base_price)}</div>
                <div className="flex items-center justify-between">

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const ItemCount = ({ stock, sold, onAdd }) => {
 
-
     const [quantity, setQuantity] = useState(1);
     const [itemStock, setItemStock] = useState(0);
     const [soldOut, setSoldOut] = useState(false);
@@ -36,16 +35,16 @@ const ItemCount = ({ stock, sold, onAdd }) => {
         <>
             <div className="py-5">
                 {
-                    !stockAlert ?
-                    <>
-                        <div className="text-sm">Stock: {itemStock}</div>
-                        <div className="text-sm font-semibold mb-4">{sold} personas compraron este producto</div>
-                    </>
-                    :
-                    <div className="text-sm font-bold text-red-500">No hay stock suficiente</div>
+                    (!stockAlert) ?
+                        <>
+                            <div className="text-sm">Stock: {itemStock}</div>
+                            <div className="text-sm font-semibold mb-4">{sold} personas compraron este producto</div>
+                        </>
+                        :
+                        <div className="text-sm font-bold text-red-500">No hay stock suficiente</div>
                 }
                 {
-                    !soldOut ?
+                    (!soldOut) ?
                         <div className="flex px-3 my-3 p-1 justify-between items-center border rounded-md bg-white">
                             <div>
                                 <button className="text-2xl font-semibold text-sky-600"

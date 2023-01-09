@@ -1,7 +1,7 @@
-import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Banner from "./Banner";
+import ItemList from "./ItemList";
 import { BounceLoader } from "react-spinners";
 import { IoLogoFacebook, IoLogoInstagram, IoLogoTiktok } from "react-icons/io5";
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
@@ -36,7 +36,7 @@ const ItemListContainer = ({ message, setBanner }) => {
                </div>
             </>}
          {
-            items.length === 0
+            (items.length === 0)
                ?
                <div className="flex flex-col h-screen -mb-48">
                   <div className="mx-auto mt-36">
@@ -47,7 +47,6 @@ const ItemListContainer = ({ message, setBanner }) => {
                   </div>
                </div>
                :
-
                <>
                   <ItemList items={items} />
                </>

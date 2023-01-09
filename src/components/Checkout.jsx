@@ -17,7 +17,6 @@ const CheckOut = () => {
   const [orderId, setOrderId] = useState();
 
   const spinner = () => {
-    console.log('SPINNER');
     return (
       <div className="mt-5 text-center">
         <RiseLoader size={8} />

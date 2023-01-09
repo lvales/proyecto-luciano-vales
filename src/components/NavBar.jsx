@@ -1,8 +1,14 @@
 import { Link, NavLink } from "react-router-dom"
 import CartWidget from "./CartWidget"
+import { IoHeartOutline, IoHeart } from 'react-icons/io5';
+import { FavContext } from "../context/FavContext";
+import { useContext } from "react";
 
 
 const NavBar = () => {
+
+   const { fav } = useContext(FavContext);
+
    return (
       <div className="p-5 border-b shadow-sm bg-white text-slate-700">
          <div className="container mx-auto flex justify-between items-centerbg-slate-200">
@@ -16,6 +22,14 @@ const NavBar = () => {
                <NavLink to={"category/hombre"} className="hover:text-slate-500 active:text-sky-700">Hombre</NavLink>
                <NavLink to={"category/mujer"} className="hover:text-slate-500 active:text-sky-700">Mujer</NavLink>
                <NavLink to={"category/kids"} className="hover:text-slate-500 active:text-sky-700">Niños</NavLink>
+               <NavLink to={"favorite"} className="hover:text-slate-500 active:text-sky-700">
+                  <div className='flex flex-row items-center'>
+                     {(fav === false)
+                        ? <div><IoHeartOutline /></div>
+                        : <div className="text-red-400"><IoHeart /></div>
+                     }
+                     <div>Favoritos</div>
+                  </div></NavLink>
                <CartWidget cantCart='3' />
             </nav>
          </div>

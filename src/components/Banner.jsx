@@ -17,9 +17,9 @@ const Banner = () => {
             </div>
             {/* <div className="absolute invisible xl:visible xl:mb-96 2xl:mb-32 2xl:bottom-1 left-1/4"> */}
          </div>
-            <div className="container relative -mt-32 2xl:-mt-48 pt-3 invisible lg:visible">
-               <Category />
-            </div>
+         <div className="container relative -mt-32 2xl:-mt-48 pt-3 invisible lg:visible">
+            <Category />
+         </div>
       </>
    )
 }

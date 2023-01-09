@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 
-
 export const CartContext = createContext([]);
 
 const CartContextProvider = ({ children }) => {
@@ -43,7 +42,7 @@ const CartContextProvider = ({ children }) => {
   }
 
   return (
-    <CartContext.Provider value={{cart, addItem, removeItem, clear, getTotalItems, getTotalPrice}}>
+    <CartContext.Provider value={{ cart, addItem, removeItem, clear, getTotalItems, getTotalPrice }}>
       {children}
     </CartContext.Provider>
   );

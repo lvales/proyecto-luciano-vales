@@ -16,7 +16,7 @@ const Error404 = () => {
           </div>
           <div className="max-w-lg">
             <img src="/assets/img/cat404.jpg" alt="" />
-            
+
           </div>
 
         </div>

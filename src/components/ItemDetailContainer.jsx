@@ -11,14 +11,14 @@ const ItemDetailContainer = () => {
    useEffect(() => {
       const db = getFirestore();
       const itemCollection = doc(db, "items", itemId);
-      getDoc(itemCollection).then ((doc) => {
+      getDoc(itemCollection).then((doc) => {
          if (!doc.exists()) {
-            console.log("No such document!");
-         } 
-         setItem({id:doc.id, ...doc.data()});
+            console.log("No existe documento!");
+         }
+         setItem({ id: doc.id, ...doc.data() });
       })
    }, [itemId]);
-      
+
 
    return (
       <ItemDetail item={item} />

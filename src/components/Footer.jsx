@@ -7,9 +7,9 @@ const Footer = () => {
             <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
                     <Link to="https://flowbite.com/" className="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-               </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"><span className="text-4xl text-red-600">.</span>Shop</span>
                     </Link>
                 </div>

@@ -1,23 +1,49 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import ImageDetail from "./ImageDetail";
 import ItemCount from "./ItemCount";
 import StarsRanking from "./StarsRanking";
 import { IoLogoInstagram, IoLogoFacebook, IoLogoTiktok, IoHeartOutline, IoHeart } from 'react-icons/io5';
 import DetailSizeColor from "./DetailSizeColor";
+import { FavContext } from "../context/FavContext";
+
 
 const ItemDetail = ({ item }) => {
 
    const [favorite, setFavorite] = useState(false);
    const { addItem } = useContext(CartContext);
+   const { onFav } = useContext(FavContext);
 
    const onAdd = (quantity) => {
       addItem(item, quantity);
    }
 
+   // Comprobar si existe en favoritos
+   useEffect(() => {
+      const fav = JSON.parse(localStorage.getItem('favorites')) || [];
+      const favItem = fav.find(fav => fav.id === item.id);
+      if (favItem) {
+         setFavorite(true);
+      }
+   }, [item]);
+
+
+   // Agregar a favoritos localstorage
    const addFav = () => {
       setFavorite(!favorite);
+      const fav = JSON.parse(localStorage.getItem('favorites')) || [];
+      const favItem = fav.find(fav => fav.id === item.id);
+      if (!favItem) {
+         fav.push(item);
+         localStorage.setItem('favorites', JSON.stringify(fav));
+      } else {
+         // Eliminar de favoritos
+         const newFav = fav.filter(fav => fav.id !== item.id);
+         localStorage.setItem('favorites', JSON.stringify(newFav));
+      }
+      onFav();
    }
+
 
    const formatNumber = (number) => new Intl.NumberFormat().format(Math.round(number));
 
@@ -25,23 +51,19 @@ const ItemDetail = ({ item }) => {
    return (
       <>
          <div className='relative justify-between flex w-full bg-slate-800 text-white text-3xl py-20 px-40'>
-
             <div className="mb-10">{item.title}</div>
-
             <div className="flex">
                <div className="mb-10 mx-2"><IoLogoInstagram /></div>
                <div className="mb-10 mx-2"><IoLogoFacebook /></div>
                <div className="mb-10 mx-2"><IoLogoTiktok /></div>
             </div>
-
          </div>
 
          <div className="relative -mt-20 mb-20 p-5 mx-auto h-full w-full max-w-4xl bg-white rounded-lg shadow-md ">
-
             <div className="flex justify-end">
                <button onClick={addFav} className='mx-5 text-3xl'>
                   {
-                     !favorite ? <IoHeartOutline /> : <IoHeart />
+                     !favorite ? <IoHeartOutline /> : <IoHeart className="text-red-400" />
                   }
                </button>
             </div>
