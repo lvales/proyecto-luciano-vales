@@ -24,7 +24,6 @@ const Category = () => {
             </Link>
          </div>
       </div>
-
    )
 }
 

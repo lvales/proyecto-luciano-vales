@@ -3,11 +3,16 @@ import CartWidget from "./CartWidget"
 import { IoHeartOutline, IoHeart } from 'react-icons/io5';
 import { FavContext } from "../context/FavContext";
 import { useContext } from "react";
+import { useEffect } from "react";
 
 
 const NavBar = () => {
 
-   const { fav } = useContext(FavContext);
+   const { fav, onFav } = useContext(FavContext);
+
+   useEffect(() => {
+      onFav();
+   }, [])
 
    return (
       <div className="p-5 border-b shadow-sm bg-white text-slate-700">
